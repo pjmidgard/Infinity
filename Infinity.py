@@ -435,9 +435,9 @@ class encypthion_class:
                                     
                                     limit1=1
                                 
-                                
+                                size_of_file=format(lenf2,'040b')
                                     
-                                size_data11=size_data12 
+                                size_data11=size_of_file+size_data12 
                                 #print(size_data11)
                                   
                                
@@ -633,6 +633,9 @@ class encypthion_class:
                                     
 
                                     size_data3=size_data2
+                                    size_of_file=int(size_data3[:40],2)
+                                    
+                                    size_data3=size_data3[40:]
                                     
                                     if size_data3[0:9]=="000000001":
                                         size_data3=size_data3[9:]
@@ -655,8 +658,15 @@ class encypthion_class:
 
 
 
+
+                                    
+                                     
+                                    
+                                    
+                                    
                                     Long_Times=int(size_data3[:8],2)
                                     size_data3=size_data3[8:]
+                                    
                                     Times_count=int(size_data3[:Long_Times],2)
                                     size_data3=size_data3[Long_Times:]
                                     Extract_file=0
@@ -714,13 +724,12 @@ class encypthion_class:
                                                             long2=len(Calculus)
                                                             Calculus_A=int(Calculus[0:3],2)
                                                             Calculus_A1=Calculus_A+3                                                          
-                                                            Calculus_A=int(Calculus[0:3],2)
-                                                            Calculus_A=Calculus_A+3
-                                                            if Calculus[Calculus_A:Calculus_A+4]!=Caculus_oct3 and Calculus_A>19 or long2!=64:
+                                                            
+                                                            if Calculus[Calculus_A1:Calculus_A1+4]!=Caculus_oct3 and Calculus_A1>19 or long2!=64:
                                                                 Count_add_block+=Calculus
-                                                            elif Calculus[Calculus_A:Calculus_A+4]!=Caculus_oct3 and Calculus_A<20:
+                                                            elif Calculus[Calculus_A1:Calculus_A1+4]!=Caculus_oct3 and Calculus_A1<20:
                                                                 
-                                                                Calculus_A=Calculus_A+8
+                                                                Calculus_A=Calculus_A1+8
                                                                 if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A<28 and long2==64:
                                                                    
                                                                    Calculus[:Calculus_A-8]+Calculus[Calculus_A:Calculus_A+4]+Calculus[Calculus_A+4-8:Calculus_A+8-8]+Calculus[Calculus_A+8-8:]
@@ -756,7 +765,7 @@ class encypthion_class:
                                                                     OCT1_number_4=(OCT1_number*4)+3
                                                                     OCT2_number_4=OCT2_number*4
 
-                                                                    add_block=Calculus[3:OCT1_number_4]+Caculus_oct3+Calculus[OCT1_number_4:]
+                                                                    add_block=Caculus_oct3+Calculus[3:]
                                                                     
                                                                     Count_add_block+=add_block
                                                                     
@@ -768,7 +777,7 @@ class encypthion_class:
                                                                     OCT2_number_4=(OCT2_number*4)+3
                                                                     
                                                                     
-                                                                    add_block=Calculus[3:OCT2_number_4]+Caculus_oct3+Calculus[OCT2_number_4:]
+                                                                    add_block=Caculus_oct3+Calculus[3:]
                                                                     
                                                                     Count_add_block+=add_block
                                                                 
@@ -801,7 +810,8 @@ class encypthion_class:
                                    
                                     
 
-                                    
+                                    size=len(size_data3)
+                                    size_data3=size_data3[:size_of_file]
                                       
                                     n = int(size_data3, 2)
                                     
