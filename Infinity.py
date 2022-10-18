@@ -294,20 +294,23 @@ class encypthion_class:
                                                             res5=1
                                                             
                                                             
-                                                            if Calculus[:4]==Caculus_oct3 and times_compress<10:
+                                                            if Calculus[:4]==Caculus_oct3:
                                                             
                                
                                                                    after_block=res7+Calculus8
-                                                                   print(times_compress)
+                                                                   #print(times_compress)
                                                                    block+=1
                                                                   
                                                                    
                                                                              
                                                                              
                                                             else:
-                                                                after_block=Calculus                                    
-                                                            
-                                                            
+                                                                after_block=Calculus
+                                                                long2=len(Calculus)
+                                                                Calculus_A=int(Calculus[0:3],2)
+                                                                Calculus_A+=3
+                                                                if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
+                                                                 Calculus[:Calculus_A]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A    :Calculus_A+4]+Calculus[Calculus_A+8:]
                                                                                                                                                                                          
                                                 if   res5==1:
                                                     res3+=1
@@ -321,8 +324,10 @@ class encypthion_class:
                                                    
                                                    Calculus_A=int(Calculus[0:3],2)
                                                    Calculus_A+=3
-                                                   if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64 and times_compress<10:
-                                                       limit=1
+                                                   if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
+                                                    Calculus[:Calculus_A]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A    :Calculus_A+4]+Calculus[Calculus_A+8:]
+                                                       
+                                                       
                                                        #print("4")
                                                        
                                                        
@@ -353,7 +358,7 @@ class encypthion_class:
                                             limit=1
                                             limit1=1
                                             
-                                        info_hex=res 
+                                        info_hex=res
                                         
                                         
                                                                        
