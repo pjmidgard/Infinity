@@ -310,7 +310,7 @@ class encypthion_class:
                                                                 Calculus_A=int(Calculus[0:3],2)
                                                                 Calculus_A+=3
                                                                 if Calculus_A<20 and Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
-                                                                 Calculus[:Calculus_A]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A    :Calculus_A+4]+Calculus[Calculus_A+8:]
+                                                                 Calculus[:Calculus_A]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A:Calculus_A+4]+Calculus[Calculus_A+8:]
                                                                                                                                                                                          
                                                 if   res5==1:
                                                     res3+=1
@@ -325,7 +325,7 @@ class encypthion_class:
                                                    Calculus_A=int(Calculus[0:3],2)
                                                    Calculus_A+=3
                                                    if Calculus_A<20 and Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
-                                                    Calculus[:Calculus_A]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A    :Calculus_A+4]+Calculus[Calculus_A+8:]
+                                                    Calculus[:Calculus_A]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A:Calculus_A+4]+Calculus[Calculus_A+8:]
                                                        
                                                        
                                                        #print("4")
