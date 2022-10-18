@@ -195,7 +195,10 @@ class encypthion_class:
                                     
                                     
                                         
-                                    
+                                    import random 
+                                    r1 = random.randint(0, 15)
+                                    smaller=0
+                                    Caculus_oct3=format(r1,'04b')
                                     
                                     info_hex=size_data4
                                     times10=0 
@@ -204,10 +207,7 @@ class encypthion_class:
                                     
                                     while limit!=1:
                                         
-                                        import random 
-                                        r1 = random.randint(0, 15)
-                                        smaller=0
-                                        Caculus_oct3=format(r1,'04b')
+
                                       
                                     
                                         size_data3=info_hex
@@ -215,7 +215,7 @@ class encypthion_class:
                                        
                                         
                                         long=len(size_data3)
-                                        #print(long)
+                                        print(long)
                                         
                                         if long<128:
                                             limit=1
@@ -271,7 +271,7 @@ class encypthion_class:
                                                         #print(Times)
                                                         block2=0
             
-                                                        if Calculus[0:4]==Calculus[Times2:Times2+4] and res1==0 and Times!=Times2 and Times2<=60 and long2==64:
+                                                        if Calculus[:4]==Calculus[Times2:Times2+4] and res1==0 and Times!=Times2 and Times2!=0 and long2==64:
                                                             Caculus_oct=format(Times//4,'03b')
                                                             
                                                             
@@ -284,7 +284,7 @@ class encypthion_class:
                                                             
                                                            
                                                             
-                                                            res7=Caculus_oct2+Calculus[4:Times2]+Calculus[Times2:]
+                                                            res7=Caculus_oct2+Calculus[4:]
                                                                 
                                                                 
                                                         
@@ -294,9 +294,13 @@ class encypthion_class:
                                                             res5=1
                                                             
                                                             
-                                                            if Calculus[:4]==Caculus_oct3:
+                                                            if Calculus[:4]==Caculus_oct3 and times_compress<10:
+                                                            
                                
                                                                    after_block=res7+Calculus8
+                                                                   print(times_compress)
+                                                                   block+=1
+                                                                  
                                                                    
                                                                              
                                                                              
@@ -317,8 +321,10 @@ class encypthion_class:
                                                    
                                                    Calculus_A=int(Calculus[0:3],2)
                                                    Calculus_A+=3
-                                                   if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
+                                                   if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64 and times_compress<10:
                                                        limit=1
+                                                       #print("4")
+                                                       
                                                        
                                                 
                                                     
@@ -347,12 +353,12 @@ class encypthion_class:
                                             limit=1
                                             limit1=1
                                             
-                                        info_hex=Caculus_oct3+res 
+                                        info_hex=res 
                                         
                                         
                                                                        
                                     
-                                    encypthion=info_hex
+                                    encypthion=Caculus_oct3+info_hex
                                     
                                    
                                     
@@ -685,16 +691,17 @@ class encypthion_class:
 
                                             while block<long:
                                                             Calculus=size_data3[block:block+blocks]
+                                                            times_compress+=1
                                                             long2=len(Calculus)
                                                  
                                                  
                                                           
                                                             Calculus_A=int(Calculus[0:3],2)
                                                             Calculus_A+=3
-                                                            if Calculus[Calculus_A:Calculus_A+4]!=Caculus_oct3 or long2!=64:
+                                                            if Calculus[Calculus_A:Calculus_A+4]!=Caculus_oct3 or long2!=64 or times_compress>10:
                                                                 Count_add_block+=Calculus
                                                                 
-                                                            if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
+                                                            if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64 and times_compress<10:
                                                             
                                                             
                                                                 
