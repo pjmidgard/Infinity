@@ -309,7 +309,7 @@ class encypthion_class:
                                                                 long2=len(Calculus)
                                                                 Calculus_A=int(Calculus[0:3],2)
                                                                 Calculus_A+=3
-                                                                if Calculus_A<19 and Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
+                                                                if Calculus_A<20 and Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
                                                                  Calculus[:Calculus_A]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A    :Calculus_A+4]+Calculus[Calculus_A+8:]
                                                                                                                                                                                          
                                                 if   res5==1:
@@ -324,7 +324,7 @@ class encypthion_class:
                                                    
                                                    Calculus_A=int(Calculus[0:3],2)
                                                    Calculus_A+=3
-                                                   if Calculus_A<19 and Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
+                                                   if Calculus_A<20 and Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
                                                     Calculus[:Calculus_A]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A    :Calculus_A+4]+Calculus[Calculus_A+8:]
                                                        
                                                        
@@ -703,10 +703,12 @@ class encypthion_class:
                                                           
                                                             Calculus_A=int(Calculus[0:3],2)
                                                             Calculus_A+=3
-                                                            if Calculus[Calculus_A:Calculus_A+4]!=Caculus_oct3 or long2!=64 or times_compress>10:
+                                                            if Calculus[Calculus_A:Calculus_A+4]!=Caculus_oct3 and Calculus_A>19 or long2!=64:
+                                                                Count_add_block+=Calculus
+                                                            if Calculus[Calculus_A:Calculus_A+4]!=Caculus_oct3 and Calculus_A<20 or long2!=64:
                                                                 Count_add_block+=Calculus
                                                                 
-                                                            if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64 and times_compress<10:
+                                                            if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A<20 long2==64:
                                                             
                                                             
                                                                 
