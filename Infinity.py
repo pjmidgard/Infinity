@@ -1,3 +1,7 @@
+#Algorithm Infinity:
+
+#We should take 64 bits and find two the same #variations for 0-4 bits long and 0-32 bit, then, #save where it is a 3 bits variation, 8 combination #and 3 bits variation, 8 combination and find #variation should be random. information should #move inside on the file.
+
 from time import time
 cvf=0
 import os
@@ -318,16 +322,19 @@ class encypthion_class:
                                                     res+=after_block
                                                     
                                                 elif res5==0:
-                                                   res+=Calculus
+                                                   
 
                                                    long2=len(Calculus)
                                                    
                                                    Calculus_A=int(Calculus[0:3],2)
                                                    Calculus_A+=3
+                                                   
+
                                                    if Calculus_A<20 and Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
                                                     Calculus[:Calculus_A]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A:Calculus_A+4]+Calculus[Calculus_A+8:]
                                                        
-                                                       
+                                                   else:
+                                                       res+=Calculus                                                       
                                                        #print("4")
                                                        
                                                        
