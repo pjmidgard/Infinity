@@ -215,7 +215,7 @@ class encypthion_class:
                                        
                                         
                                         long=len(size_data3)
-                                        print(long)
+                                        #print(long)
                                         
                                         if long<128:
                                             limit=1
@@ -262,11 +262,11 @@ class encypthion_class:
                                                 res5=0
                                                 limit_find=0
                                                 
-                                                while Times2!=28:
+                                                while Times2!=16:
                                                     Times2+=4
                                                     Times=-4
                                                     #print(Times2)
-                                                    while Times!=28:
+                                                    while Times!=16:
                                                         Times+=4
                                                         #print(Times)
                                                         block2=0
@@ -309,7 +309,7 @@ class encypthion_class:
                                                                 long2=len(Calculus)
                                                                 Calculus_A=int(Calculus[0:3],2)
                                                                 Calculus_A+=3
-                                                                if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
+                                                                if Calculus_A<19 and Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
                                                                  Calculus[:Calculus_A]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A    :Calculus_A+4]+Calculus[Calculus_A+8:]
                                                                                                                                                                                          
                                                 if   res5==1:
@@ -324,7 +324,7 @@ class encypthion_class:
                                                    
                                                    Calculus_A=int(Calculus[0:3],2)
                                                    Calculus_A+=3
-                                                   if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
+                                                   if Calculus_A<19 and Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
                                                     Calculus[:Calculus_A]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A    :Calculus_A+4]+Calculus[Calculus_A+8:]
                                                        
                                                        
