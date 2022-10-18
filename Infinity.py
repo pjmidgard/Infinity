@@ -283,8 +283,8 @@ class encypthion_class:
                                                             #print(Caculus_oct2)
                                                             
                                                            
-                                                            if Times<Times2:
-                                                                res7=Caculus_oct2+Calculus[4:Times2]+Calculus[Times2:]
+                                                            
+                                                            res7=Caculus_oct2+Calculus[4:Times2]+Calculus[Times2:]
                                                                 
                                                                 
                                                         
@@ -312,10 +312,12 @@ class encypthion_class:
                                                     
                                                 elif res5==0:
                                                    res+=Calculus
+
+                                                   long2=len(Calculus)
                                                    
                                                    Calculus_A=int(Calculus[0:3],2)
                                                    Calculus_A+=3
-                                                   if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3:
+                                                   if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
                                                        limit=1
                                                        
                                                 
@@ -682,16 +684,17 @@ class encypthion_class:
                                             res_one_time=0
 
                                             while block<long:
-                                                 Calculus=size_data3[block:block+blocks]
+                                                            Calculus=size_data3[block:block+blocks]
+                                                            long2=len(Calculus)
                                                  
                                                  
                                                           
                                                             Calculus_A=int(Calculus[0:3],2)
                                                             Calculus_A+=3
-                                                            if Calculus[Calculus_A:Calculus_A+4]!=Caculus_oct3:
+                                                            if Calculus[Calculus_A:Calculus_A+4]!=Caculus_oct3 or long2!=64:
                                                                 Count_add_block+=Calculus
                                                                 
-                                                            if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3:
+                                                            if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
                                                             
                                                             
                                                                 
