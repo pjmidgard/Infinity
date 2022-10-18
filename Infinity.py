@@ -691,7 +691,9 @@ class encypthion_class:
                                             
                                             block=0
                                             blocks=64
+                                           
                                             long=len(size_data3)
+                                            #print(long)
                                             
                                             check_long=len(size_data3)
                                             
@@ -703,6 +705,7 @@ class encypthion_class:
 
                                             while block<long:
                                                             Calculus=size_data3[block:block+blocks]
+                                                            block+=blocks
                                                             times_compress+=1
                                                             long2=len(Calculus)
                                                  
@@ -717,7 +720,7 @@ class encypthion_class:
                                                                 Calculus_A=Calculus_A+8
                                                                 if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A<28 and long2==64:
                                                                    
-                                                                   Calculus[:Calculus_A]+Calculus[Calculus_A:Calculus_A+4]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A+8:]
+                                                                   Calculus[:Calculus_A-8]+Calculus[Calculus_A:Calculus_A+4]+Calculus[Calculus_A+4-8:Calculus_A+8-8]+Calculus[Calculus_A+8-8:]
 
                                                                    Count_add_block+=Calculus 
                                                                 else:
