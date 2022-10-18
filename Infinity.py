@@ -708,7 +708,7 @@ class encypthion_class:
                                                             if Calculus[Calculus_A:Calculus_A+4]!=Caculus_oct3 and Calculus_A<20 or long2!=64:
                                                                 Count_add_block+=Calculus
                                                                 
-                                                            if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A<20 long2==64:
+                                                            if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A<20 and long2==64:
                                                             
                                                             
                                                                 
