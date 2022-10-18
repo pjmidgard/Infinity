@@ -702,11 +702,19 @@ class encypthion_class:
                                                  
                                                           
                                                             Calculus_A=int(Calculus[0:3],2)
-                                                            Calculus_A+=3
+                                                            Calculus_A=Calculus_A+3
                                                             if Calculus[Calculus_A:Calculus_A+4]!=Caculus_oct3 and Calculus_A>19 or long2!=64:
                                                                 Count_add_block+=Calculus
                                                             if Calculus[Calculus_A:Calculus_A+4]!=Caculus_oct3 and Calculus_A<20 or long2!=64:
-                                                                Count_add_block+=Calculus
+                                                                
+                                                                Calculus_A=Calculus_A+8
+                                                                if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A<28 and long2==64:
+                                                                   
+                                                                   Calculus[:Calculus_A]+Calculus[Calculus_A:Calculus_A+4]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A+8:]
+
+                                                                   Count_add_block+=Calculus 
+                                                                else:
+                                                                   Count_add_block+=Calculus
                                                                 
                                                             if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A<20 and long2==64:
                                                             
