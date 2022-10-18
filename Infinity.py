@@ -667,18 +667,18 @@ class encypthion_class:
                                     Times10=0  
                                     
                                     
-
+                                    if Times_count!=0:                                                                               
+                                        Caculus_oct3=size_data3[:4]
+                                        size_data3=size_data3[4:]
                                     
-
+                                    
                                     
                                     Count_add_block2=""
                                     if Extract_file==0 or Times_count==0:
                                         Count_add_block2=size_data3
                                     elif Extract_file==1 and Times_count>0:
                                         while Times_count!=Times10:
-                                            if Times_count!=0:                                                                               
-                                                Caculus_oct3=size_data3[:4]
-                                                size_data3=size_data3[4:]
+                                            
  
                                             
                                             
