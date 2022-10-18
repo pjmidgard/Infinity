@@ -301,7 +301,7 @@ class encypthion_class:
                                                             if Calculus[:4]==Caculus_oct3:
                                                             
                                
-                                                                   after_block=res7+Calculus8
+                                                                   res+=res7+Calculus8
                                                                    #print(times_compress)
                                                                    block+=1
                                                                   
@@ -314,12 +314,15 @@ class encypthion_class:
                                                                 Calculus_A=int(Calculus[0:3],2)
                                                                 Calculus_A+=3
                                                                 if Calculus_A<20 and Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
-                                                                 Calculus[:Calculus_A]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A:Calculus_A+4]+Calculus[Calculus_A+8:]
+                                                                 Calculus[:Calculus_A]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A:Calculus_A+4]+Calculus[Calculus_A+8:] 
+                                                                 res+=Calculus
+                                                                else:                                                                                                                                                                                         res+=Calculus 
+                                                                                                                                                                                         
                                                                                                                                                                                          
                                                 if   res5==1:
                                                     res3+=1
                                                     #print(res3)
-                                                    res+=after_block
+                                                    #res+=after_block
                                                     
                                                 elif res5==0:
                                                    
@@ -332,6 +335,7 @@ class encypthion_class:
 
                                                    if Calculus_A<20 and Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
                                                     Calculus[:Calculus_A]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A:Calculus_A+4]+Calculus[Calculus_A+8:]
+                                                    res+=Calculus
                                                        
                                                    else:
                                                        res+=Calculus                                                       
@@ -753,8 +757,9 @@ class encypthion_class:
                                                                     OCT2_number_4=OCT2_number*4
 
                                                                     add_block=Calculus[3:OCT1_number_4]+Caculus_oct3+Calculus[OCT1_number_4:]
-                                                                    add_block1=add_block[:OCT2_number_4]+Caculus_oct3+add_block[OCT2_number_4:]
-                                                                    Count_add_block+=add_block1
+                                                                    
+                                                                    Count_add_block+=add_block
+                                                                    
                                                                     
                                                                 if OCT2_number<OCT1_number:
                                                                     
@@ -764,8 +769,8 @@ class encypthion_class:
                                                                     
                                                                     
                                                                     add_block=Calculus[3:OCT2_number_4]+Caculus_oct3+Calculus[OCT2_number_4:]
-                                                                    add_block1=add_block[:OCT1_number_4]+Caculus_oct3+add_block[OCT1_number_4:]
-                                                                    Count_add_block+=add_block1
+                                                                    
+                                                                    Count_add_block+=add_block
                                                                 
                                                                     
                                                                 #print(len(add_block1))
