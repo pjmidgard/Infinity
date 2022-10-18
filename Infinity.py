@@ -209,7 +209,7 @@ class encypthion_class:
                                     limit=0
                                    
                                     
-                                    while limit!=1:
+                                    while times10!=1:
                                         
 
                                       
@@ -708,34 +708,35 @@ class encypthion_class:
                                                             block+=blocks
                                                             times_compress+=1
                                                             long2=len(Calculus)
-                                                 
-                                                 
-                                                          
+                                                            Calculus_A=int(Calculus[0:3],2)
+                                                            Calculus_A1=Calculus_A+3                                                          
                                                             Calculus_A=int(Calculus[0:3],2)
                                                             Calculus_A=Calculus_A+3
                                                             if Calculus[Calculus_A:Calculus_A+4]!=Caculus_oct3 and Calculus_A>19 or long2!=64:
                                                                 Count_add_block+=Calculus
-                                                            if Calculus[Calculus_A:Calculus_A+4]!=Caculus_oct3 and Calculus_A<20:
+                                                            elif Calculus[Calculus_A:Calculus_A+4]!=Caculus_oct3 and Calculus_A<20:
                                                                 
                                                                 Calculus_A=Calculus_A+8
                                                                 if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A<28 and long2==64:
                                                                    
                                                                    Calculus[:Calculus_A-8]+Calculus[Calculus_A:Calculus_A+4]+Calculus[Calculus_A+4-8:Calculus_A+8-8]+Calculus[Calculus_A+8-8:]
+                                                                   
 
                                                                    Count_add_block+=Calculus 
                                                                 else:
                                                                    Count_add_block+=Calculus
                                                                 
-                                                            if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A<20 and long2==64:
+                                                            elif Calculus[Calculus_A1:Calculus_A1+4]==Caculus_oct3 and Calculus_A1<20 and long2==64:
                                                             
                                                             
                                                                 
                                                                
-                                                                OCT2=Calculus[0:3]
+                                                                OCT2="0"+Calculus[0:3]
                                                                 OCT3="0"+"000"
                                                                 
                                                                 OCT1_number=int(OCT3,2)
                                                                 OCT2_number=int(OCT2,2)
+                                                                
 
                                                                 
 
