@@ -295,14 +295,14 @@ class encypthion_class:
                                                             res5=1
                                                             
                                                             
-                                                            if Calculus[:4]==Caculus_oct3 and res_one_time==0:
+                                                            if Calculus[:4]==Caculus_oct3:
                                                                 
                                                             
                                
                                                                    res+=res7+Calculus8
                                                                    #print(times_compress)
                                                                    block+=1
-                                                                   res_one_time==1
+                                                                   
                                                                   
                                                                    
                                                                              
@@ -732,8 +732,7 @@ class encypthion_class:
 
 
                                                                 
-                                                            if Calculus[Calculus_A1:Calculus_A1+4]==Caculus_oct3 and Calculus_A1>3 and long2==64 and res_one_time==0:
-                                                                res_one_time=1
+                                                            if Calculus[Calculus_A1:Calculus_A1+4]==Caculus_oct3 and Calculus_A1>3 and long2==64:
                                                             
                                                             
                                                             
