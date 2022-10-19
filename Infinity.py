@@ -272,7 +272,7 @@ class encypthion_class:
                                                     #print(Times2)
                                                     
             
-                                                    if Calculus[:4]==Calculus[Times2:Times2+4] and res1==0 and Times!=Times2 and long2==64:
+                                                    if Calculus[:4]==Calculus[Times2:Times2+4] and res1==0 and long2==64:
                                                             Caculus_oct=format(Times//4,'03b')
                                                             
                                                             
