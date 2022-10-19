@@ -822,9 +822,9 @@ class encypthion_class:
                                     
 
                                     size=len(size_data3)
-                                    print(size//8)
+                                    
                                   
-                                    size_data3=size_data3[:size_of_file]
+                                    
                                     
                                     
                                                                                   
