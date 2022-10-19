@@ -734,54 +734,18 @@ class encypthion_class:
                                                                 
                                                             if Calculus[Calculus_A1:Calculus_A1+4]==Caculus_oct3 and Calculus_A1>3 and long2==64:
                                                             
-                                                            
-                                                            
-                                                                
-                                                               
-                                                                OCT2="0"+Calculus[0:3]
-                                                                OCT3="0"+"000"
-                                                                
-                                                                OCT1_number=int(OCT3,2)
-                                                                OCT2_number=int(OCT2,2)
-                                                                
 
-                                                                
-
-                                                                add_block=""
-                                                                add_block1=""
-                                                                
-                                                                
-                                                                                                                                                                        
-                                                                if OCT1_number==OCT2_number:
-                                                                    Count_add_block+=Calculus                                                               
-                                                                if OCT1_number<OCT2_number:
-                                                                    
-                                                                    OCT1_number_4=(OCT1_number*4)+3
-                                                                    OCT2_number_4=OCT2_number*4
-
-                                                                    add_block=Caculus_oct3+Calculus[3:]
-                                                                    
-                                                                    Count_add_block+=add_block
-                                                                    
-                                                                    
-                                                                if OCT2_number<OCT1_number:
-                                                                    
-                                                                    
-                                                                    OCT1_number_4=OCT1_number*4
-                                                                    OCT2_number_4=(OCT2_number*4)+3
+                                             
                                                                     
                                                                     
                                                                     add_block=Caculus_oct3+Calculus[3:]
-                                                                    
                                                                     Count_add_block+=add_block
 
                                                                                                                                  
                                                                 #print(len(add_block))
                                                                 
 
-                                                                add_block1=""
-                                                                add_block=""
-                                                                
+                                                           
                                                             
 
                                                                 
