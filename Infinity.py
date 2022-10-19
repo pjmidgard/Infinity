@@ -209,7 +209,7 @@ class encypthion_class:
                                     limit=0
                                    
                                     
-                                    while limit!=1:
+                                    while times10!=1:
                                         
 
                                       
@@ -313,7 +313,17 @@ class encypthion_class:
                                                                 Calculus_A=int(Calculus[0:3],2)
                                                                 Calculus_A=Calculus_A*4
                                                                 Calculus_A+=3
-                                                                if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A!=3 and long2==64:
+                                                                if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A!=3 and Calculus[3:7]==Caculus_oct3 and long2==64:
+                                                                
+                                                                 Reverse=Calculus[3:7]
+                                                                 Reverse=Reverse[::-1]
+                                                                 print(Reverse)
+                                                                 print(Calculus[3:7])
+                                                             
+                                                                 Calculus[:Calculus_A]+Reverse+Calculus[Calculus_A+4:]
+                                                                 res+=Calculus
+                                                                 
+                                                                elif Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A!=3 and Calculus[3:7]!=Caculus_oct3 and long2==64:
                                                                  Calculus[:Calculus_A]+Calculus[3:7]+Calculus[Calculus_A+4:]
                                                                  res+=Calculus
                                                                  
@@ -336,9 +346,20 @@ class encypthion_class:
                                                    Calculus_A=int(Calculus[0:3],2)
                                                    Calculus_A=Calculus_A*4
                                                    Calculus_A+=3
-                                                   if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64 and Calculus_A!=3:
-                                                    Calculus[:Calculus_A]+Calculus[3:7]+Calculus[Calculus_A+4:]
-                                                    res+=Calculus
+                                                   if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A!=3 and Calculus[3:7]==Caculus_oct3 and long2==64:
+                                                                 Reverse=Calculus[3:7]
+                                                                 Reverse=Reverse[::-1]
+                                                                 print(Reverse)
+                                                                 print(Calculus[3:7])
+                                                             
+                                                                 Calculus[:Calculus_A]+Reverse+Calculus[Calculus_A+4:]
+                                                               
+                                                                 
+                                                                 res+=Calculus
+                                                   
+                                                   elif Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A!=3 and Calculus[3:7]!=Caculus_oct3 and long2==64:
+                                                                 Calculus[:Calculus_A]+Calculus[3:7]+Calculus[Calculus_A+4:]
+                                                                 res+=Calculus
                                                        
                                                    else:
                                                        res+=Calculus                                                       
