@@ -1,3 +1,7 @@
+#Algorithm Infinity:
+
+#We should take 64 bits and find two the same #variations for 0-4 bits long and 0-32 bit, then, #save where it is a 3 bits variation, 8 combination #and 3 bits variation, 8 combination and find #variation should be random. information should #move inside on the file. Need to know size of #the file.
+
 from time import time
 cvf=0
 import os
@@ -205,7 +209,7 @@ class encypthion_class:
                                     limit=0
                                    
                                     
-                                    while times10!=1:
+                                    while limit!=1:
                                         
 
                                       
@@ -256,22 +260,19 @@ class encypthion_class:
                                                 block2=0
                                                 blocks2=0
                                                 Times=-4
-                                                Times2=-4
+                                                Times2=0
                                                 res1=0
                                                 res2=0
                                                 res5=0
                                                 limit_find=0
                                                 
-                                                while Times2!=16:
+                                                while Times2!=28:
                                                     Times2+=4
-                                                    Times=-4
+                                                   
                                                     #print(Times2)
-                                                    while Times!=16:
-                                                        Times+=4
-                                                        #print(Times)
-                                                        block2=0
+                                                    
             
-                                                        if Calculus[:4]==Calculus[Times2:Times2+4] and res1==0 and Times!=Times2 and Times2!=0 and long2==64:
+                                                    if Calculus[:4]==Calculus[Times2:Times2+4] and res1==0 and Times!=Times2 and long2==64:
                                                             Caculus_oct=format(Times//4,'03b')
                                                             
                                                             
@@ -294,12 +295,14 @@ class encypthion_class:
                                                             res5=1
                                                             
                                                             
-                                                            if Calculus[:4]==Caculus_oct3:
+                                                            if Calculus[:4]==Caculus_oct3 and res_one_time==0:
+                                                                
                                                             
                                
                                                                    res+=res7+Calculus8
                                                                    #print(times_compress)
                                                                    block+=1
+                                                                   res_one_time==1
                                                                   
                                                                    
                                                                              
@@ -308,10 +311,15 @@ class encypthion_class:
                                                                 after_block=Calculus
                                                                 long2=len(Calculus)
                                                                 Calculus_A=int(Calculus[0:3],2)
+                                                                Calculus_A=Calculus_A*4
                                                                 Calculus_A+=3
-                                                                if Calculus_A<20 and Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
-                                                                 Calculus[:Calculus_A]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A:Calculus_A+4]+Calculus[Calculus_A+8:] 
+                                                                if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A!=3 and long2==64:
+                                                                 Calculus[:Calculus_A]+Calculus[3:7]+Calculus[Calculus_A+4:]
                                                                  res+=Calculus
+                                                                 
+                                                    
+                                                                 
+                                                                 
                                                                 else:                                                                                                                                                                                         res+=Calculus 
                                                                                                                                                                                          
                                                                                                                                                                                          
@@ -326,11 +334,10 @@ class encypthion_class:
                                                    long2=len(Calculus)
                                                    
                                                    Calculus_A=int(Calculus[0:3],2)
+                                                   Calculus_A=Calculus_A*4
                                                    Calculus_A+=3
-                                                   
-
-                                                   if Calculus_A<20 and Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64:
-                                                    Calculus[:Calculus_A]+Calculus[Calculus_A+4:Calculus_A+8]+Calculus[Calculus_A:Calculus_A+4]+Calculus[Calculus_A+8:]
+                                                   if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and long2==64 and Calculus_A!=3:
+                                                    Calculus[:Calculus_A]+Calculus[3:7]+Calculus[Calculus_A+4:]
                                                     res+=Calculus
                                                        
                                                    else:
@@ -719,23 +726,15 @@ class encypthion_class:
                                                             times_compress+=1
                                                             long2=len(Calculus)
                                                             Calculus_A=int(Calculus[0:3],2)
+                                                            Calculus_A=Calculus_A*4
                                                             Calculus_A1=Calculus_A+3                                                          
-                                                            
-                                                            if Calculus[Calculus_A1:Calculus_A1+4]!=Caculus_oct3 and Calculus_A1>19 or long2!=64:
-                                                                Count_add_block+=Calculus
-                                                            elif Calculus[Calculus_A1:Calculus_A1+4]!=Caculus_oct3 and Calculus_A1<20:
-                                                                
-                                                                Calculus_A=Calculus_A1+8
-                                                                if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A<28 and long2==64:
-                                                                   
-                                                                   Calculus[:Calculus_A-8]+Calculus[Calculus_A:Calculus_A+4]+Calculus[Calculus_A+4-8:Calculus_A+8-8]+Calculus[Calculus_A+8-8:]
-                                                                   
+   
 
-                                                                   Count_add_block+=Calculus 
-                                                                else:
-                                                                   Count_add_block+=Calculus
+
                                                                 
-                                                            elif Calculus[Calculus_A1:Calculus_A1+4]==Caculus_oct3 and Calculus_A1<20 and long2==64:
+                                                            if Calculus[Calculus_A1:Calculus_A1+4]==Caculus_oct3 and Calculus_A1>3 and long2==64 and res_one_time==0:
+                                                                res_one_time=1
+                                                            
                                                             
                                                             
                                                                 
@@ -776,9 +775,9 @@ class encypthion_class:
                                                                     add_block=Caculus_oct3+Calculus[3:]
                                                                     
                                                                     Count_add_block+=add_block
-                                                                
-                                                                    
-                                                                #print(len(add_block1))
+
+                                                                                                                                 
+                                                                #print(len(add_block))
                                                                 
 
                                                                 add_block1=""
@@ -786,7 +785,9 @@ class encypthion_class:
                                                                 
                                                             
 
-                                                        
+                                                                
+                                                            else:
+                                                                                                                                     Count_add_block+=Calculus                                                         
                                                             
                                                             
                                                         
@@ -807,7 +808,14 @@ class encypthion_class:
                                     
 
                                     size=len(size_data3)
+                                    print(size//8)
+                                  
                                     size_data3=size_data3[:size_of_file]
+                                    
+                                    
+                                                                                  
+                                            
+
                                       
                                     n = int(size_data3, 2)
                                     
