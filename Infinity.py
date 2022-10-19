@@ -209,7 +209,7 @@ class encypthion_class:
                                     limit=0
                                    
                                     
-                                    while times10!=1:
+                                    while limit!=1:
                                         
 
                                       
@@ -295,13 +295,16 @@ class encypthion_class:
                                                             res5=1
                                                             
                                                             
-                                                            if Calculus[:4]==Caculus_oct3:
+                                                            if Calculus[:4]==Caculus_oct3 and res_one_time==0:
+                                                                                                                             
                                                                 
                                                             
                                
                                                                    res+=res7+Calculus8
                                                                    #print(times_compress)
                                                                    block+=1
+                                                                   res_one_time=1
+   
                                                                    
                                                                   
                                                                    
@@ -487,9 +490,9 @@ class encypthion_class:
                                     
                                     limit1=1
                                 
-                                size_of_file=format(lenf2,'040b')
+                               
                                     
-                                size_data11=size_of_file+size_data12 
+                                size_data11=size_data12 
                                 #print(size_data11)
                                   
                                
@@ -504,7 +507,8 @@ class encypthion_class:
                              
                                 jl=binascii.unhexlify(qqwslenf % n)
                                 
-                           
+                              
+                                
                                 
                              
                                 
@@ -685,9 +689,7 @@ class encypthion_class:
                                     
 
                                     size_data3=size_data2
-                                    size_of_file=int(size_data3[:40],2)
                                     
-                                    size_data3=size_data3[40:]
                                     
                                     if size_data3[0:9]=="000000001":
                                         size_data3=size_data3[9:]
