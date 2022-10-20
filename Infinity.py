@@ -1,7 +1,3 @@
-#Algorithm Infinity:
-
-#We should take 64 bits and find two the same #variations for 0-4 bits long and 0-32 bit, then, #save where it is a 3 bits variation, 8 combination #and 3 bits variation, 8 combination and find #variation should be random. information should #move inside on the file. Need to know size of #the file.
-
 from time import time
 cvf=0
 import os
@@ -301,6 +297,7 @@ class encypthion_class:
                                                             
                                
                                                                    res+=res7+Calculus8
+                                                                   res_one_time+=1
                                                                    #print(Calculus[Times2:Times2+4])
                                                                   
                                                                  
@@ -495,7 +492,10 @@ class encypthion_class:
                                 
                                
                                     
-                                size_data11=size_data12 
+                                size_data11=size_data12
+                                
+                                b12=format(res_one_time,'040b')
+                                size_data11=b12+size_data12 
                                 #print(size_data11)
                                   
                                
@@ -693,7 +693,10 @@ class encypthion_class:
 
                                     size_data3=size_data2
                                     
-                                    
+                                    res_one_time=size_data3[:40]
+                                    res_one_time=int(res_one_time,2)
+                                   
+                                    size_data3=size_data3[40:]
                                     if size_data3[0:9]=="000000001":
                                         size_data3=size_data3[9:]
                                     elif size_data3[0:8]=="00000001":
@@ -772,7 +775,7 @@ class encypthion_class:
                                             
                                             times_compress=0
 
-                                            res_one_time=0
+                                            res_one_time2=0
 
                                             while block<long:
                                                             Calculus=size_data3[block:block+blocks]
@@ -786,13 +789,16 @@ class encypthion_class:
 
 
                                                                 
-                                                            if Calculus[Calculus_A1:Calculus_A1+4]==Caculus_oct3 and Calculus_A1!=3 and long2==64:
+                                                            if Calculus[Calculus_A1:Calculus_A1+4]==Caculus_oct3 and Calculus_A1!=3 and long2==64 and res_one_time2<res_one_time:
+                                                                
                                                             
 
                                              
                                                                     
                                                                     
                                                                     add_block=Caculus_oct3+Calculus[3:]
+                                                                    res_one_time2+=1
+                                                                    
                                                                     Count_add_block+=add_block
                                                                     #print(len(add_block))
                                                                 
