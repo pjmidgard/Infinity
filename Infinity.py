@@ -785,7 +785,26 @@ class encypthion_class:
                                                             long2=len(Calculus)
                                                             Calculus_A=int(Calculus[0:3],2)
                                                             Calculus_A=Calculus_A*4
-                                                            Calculus_A1=Calculus_A+3                                                          
+                                                            Calculus_A1=Calculus_A+3
+                                                            
+                                                            Reverse=Calculus[3:7]
+                                                            bl=0
+                                                                 
+                                                            R1=""
+                                                            while bl<5:
+                                                                R=Reverse[bl:bl+1]
+                                                                
+                                                                 
+                                                                if R=="0":
+                                                                    R1+="1"
+                                                                elif R=="1":
+                                                                    R1+="0"
+                                                                    bl+=1
+                                                                 
+                                                             
+                                                                 
+                                                             
+                                                        
    
 
 
@@ -809,7 +828,16 @@ class encypthion_class:
 
                                                                 
                                                             else:
-                                                                    Count_add_block+=Calculus                                                         
+                                                                    if Calculus[Calculus_A:Calculus_A+4]==R1 and Calculus_A!=3 and long2==64:
+                                                                         Calculus[:Calculus_A]+Caculus_oct3+Calculus[Calculus_A+4:]
+                                                                         Count_add_block+=Calculus
+
+                                                                    elif Calculus[Calculus_A:Calculus_A+4]==Calculus[3:7] and Calculus_A!=3 and long2==64:
+                                                                         Calculus[:Calculus_A]+Caculus_oct3+Calculus[Calculus_A+4:]
+                                                                         Count_add_block+=Calculus
+                                                                    else:
+                                                                        Count_add_block+=Calculus 
+                                                                                                                            
                                                             
                                                             
                                                         
