@@ -347,7 +347,8 @@ class encypthion_class:
                                                     
                                                                  
                                                                  
-                                                                else:                                                                                                                                                                                         res+=Calculus 
+                                                                else:
+                                                                    res+=Calculus 
                                                                                                                                                                                          
                                                                                                                                                                                          
                                                 if   res5==1:
@@ -808,7 +809,7 @@ class encypthion_class:
 
                                                                 
                                                             else:
-                                                                                                                                     Count_add_block+=Calculus                                                         
+                                                                    Count_add_block+=Calculus                                                         
                                                             
                                                             
                                                         
