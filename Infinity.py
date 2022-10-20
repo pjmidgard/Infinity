@@ -217,7 +217,7 @@ class encypthion_class:
                                         long=len(size_data3)
                                         #print(long)
                                         
-                                        if long<128:
+                                        if long<=8192:
                                             limit=1
                                             smaller=1
                                             limit1=1
@@ -828,12 +828,12 @@ class encypthion_class:
 
                                                                 
                                                             else:
-                                                                    if Calculus[Calculus_A:Calculus_A+4]==R1 and Calculus_A!=3 and long2==64:
-                                                                         Calculus[:Calculus_A]+Caculus_oct3+Calculus[Calculus_A+4:]
+                                                                    if Calculus[Calculus_A1:Calculus_A1+4]==R1 and Calculus_A1!=3 and long2==64:
+                                                                         Calculus[:Calculus_A1]+Caculus_oct3+Calculus[Calculus_A1+4:]
                                                                          Count_add_block+=Calculus
 
-                                                                    elif Calculus[Calculus_A:Calculus_A+4]==Calculus[3:7] and Calculus_A!=3 and long2==64:
-                                                                         Calculus[:Calculus_A]+Caculus_oct3+Calculus[Calculus_A+4:]
+                                                                    elif Calculus[Calculus_A1:Calculus_A1+4]==Calculus[3:7] and Calculus_A1!=3 and long2==64:
+                                                                         Calculus[:Calculus_A1]+Caculus_oct3+Calculus[Calculus_A1+4:]
                                                                          Count_add_block+=Calculus
                                                                     else:
                                                                         Count_add_block+=Calculus 
