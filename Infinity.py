@@ -799,7 +799,7 @@ class encypthion_class:
                                                                     R1+="1"
                                                                 elif R=="1":
                                                                     R1+="0"
-                                                                    bl+=1
+                                                                bl+=1
                                                                  
                                                              
                                                                  
