@@ -318,8 +318,8 @@ class encypthion_class:
                                                                 after_block=Calculus
                                                                 long2=len(Calculus)
                                                                 Calculus_A=int(Calculus[0:3],2)
-                                                                Calculus_A=Calculus_A*4
-                                                                Calculus_A+=3
+                                                                Calculus_A=(Calculus_A*4)-1
+                                                              
                                                                 if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A!=3 and Calculus[3:7]==Caculus_oct3 and long2==64:
                                                                 
                                                                  Reverse=Calculus[3:7]
@@ -366,8 +366,8 @@ class encypthion_class:
                                                    long2=len(Calculus)
                                                    
                                                    Calculus_A=int(Calculus[0:3],2)
-                                                   Calculus_A=Calculus_A*4
-                                                   Calculus_A+=3
+                                                   Calculus_A=(Calculus_A*4)-1
+                                                   
                                                    if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A!=3 and Calculus[3:7]==Caculus_oct3 and long2==64:
                                                                 
                                                                  Reverse=Calculus[3:7]
@@ -788,8 +788,8 @@ class encypthion_class:
                                                             times_compress+=1
                                                             long2=len(Calculus)
                                                             Calculus_A=int(Calculus[0:3],2)
-                                                            Calculus_A=Calculus_A*4
-                                                            Calculus_A1=Calculus_A+3
+                                                            Calculus_A=(Calculus_A*4)-1
+                                                            Calculus_A1=Calculus_A
                                                             
                                                             Reverse=Calculus[3:7]
                                                             bl=0
