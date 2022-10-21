@@ -1,3 +1,7 @@
+#Algorithm Infinity:
+
+#We should take 64 bits and find two the same #variations for 0-4 bits long and 0-32 bit, then, #save where it is a 3 bits variation, 8 combination #and 3 bits variation, 8 combination and find #variation should be random. 3-7 the same or if #the random variasion equal reverse and count #how many blocks compress.
+
 from time import time
 cvf=0
 import os
@@ -828,7 +832,7 @@ class encypthion_class:
 
                                                                 
                                                             else:
-                                                                    if Calculus[Calculus_A1:Calculus_A1+4]==R1 and Calculus_A1!=3 and long2==64:
+                                                                    if Calculus[Calculus_A1:Calculus_A1+4]==R1 and R1==Caculus_oct3 and Calculus_A1!=3 and long2==64:
                                                                          Calculus[:Calculus_A1]+Caculus_oct3+Calculus[Calculus_A1+4:]
                                                                          Count_add_block+=Calculus
 
