@@ -47,6 +47,10 @@ class encypthion_class:
                     nac=len(nameas)
 
                     long=len(name)
+
+                    
+
+                    
                    
                     name_cut=len(".bin")
                     
@@ -514,6 +518,9 @@ class encypthion_class:
                                 qqwslenf="%0"+qqwslenf+"x"
                              
                                 jl=binascii.unhexlify(qqwslenf % n)
+
+                                import paq
+                                jl=paq.compress(jl)
                                 
                               
                                 
@@ -610,6 +617,9 @@ class encypthion_class:
                        # Read the whole file at once
                         
                         data = binary_file.read()
+
+                        import paq
+                        data=paq.decompress(data)  
                         
 
                         
