@@ -1,20 +1,16 @@
-#Algorithm Infinity:
-
-#We should take 64 bits and find two the same #variations for 0-4 bits long and 0-32 bit, then, #save where it is a 3 bits variation, 8 combination #and 3 bits variation, 8 combination and find #variation should be random. 3-7 the same or if #the random variasion equal reverse and count #how many blocks compress.
-
 from time import time
 cvf=0
 import os
 import binascii
 self="'"
 
-namez = input("for compression c or e for extract: ")
-#@Author Jurijus pacalovas
-class encypthion_class:
+namez = input("for compress c or extract e? ")
+#@Author Jurijus Pacalovas
+class compression:
 
-    def encypthion1(self):
+    def cryptograpy_compression(self):
 
-                 
+                
                 
                 self.name = "Author: Jurijus Pacalovas"
 
@@ -35,31 +31,39 @@ class encypthion_class:
                             print('Path is not exists!')
                             raise SystemExit
                    
-                    
+                    long_block=100
                         
                     namea=""
                     namem=""
                     namema="?"
-                    
+                   
                     assxw=0
-                    
+                    blockw=5
+                    blockw1=4
                     nameas=name
                     nac=len(nameas)
 
                     long=len(name)
+                   
 
                     
 
+                    
                     
                    
+                    
+                    Deep_long=240
+                    Deep_long_All=Deep_long*16
+                    block_size_long=16
+                    Times_compression=1
+                    
                     name_cut=len(".bin")
                     
                     nameas=name+".bin"
                     name_bofore=len(nameas)
+                    F=0
                     
                     
-                    
-
                     	 
                     nac=len(nameas)
                     
@@ -91,12 +95,16 @@ class encypthion_class:
 
                        # Read the whole file at once
                         data = binary_file.read()
-                        
-                
+                        if data[0:8]==b'\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1':
+                        	data=b'\xd0'+data[8:]
+                        else:
+                        	data=b'\x00'+data
+                        #import paq
+                        #data=paq.compress(data)
+                        data1=data
                         size_after2=len(data)
-                        #print(size_after2)  
-                        
-                        if len(data)==0 or len(data)>2**40:
+                        #print(size_after2)
+                        if len(data)==0:
                             x4=0.0
                             print(x4)
                             raise SystemExit
@@ -107,9 +115,10 @@ class encypthion_class:
                   
                         s=str(data)
                         
-                        
+                        Limit_size_of_file=0
+                        File_size_Divide=0
                         lenf1=len(data)
-                          
+                       
                     
                             
   
@@ -179,379 +188,180 @@ class encypthion_class:
 
                                     lenf3=len(size_data2)
                                 lenf2=len(size_data2)
-
-                                size_data11=""
-                                size_data12=""
-                                long21=len(size_data3)
-                                limit1=0
-                                size_data4="'"
-                                
-                                Times_of_times=0
-                                
-                                
+                                size_data6=""
+                                size_data4=""
+                                size_data7=""
+                                size_data8=""
 
                                 
-                                while limit1!=1:    
+                                    
                                 
-                                    size_data4=size_data2
-                                    long_B=len(size_data4)
-                                    long=len(size_data4)
-                                    Times_of_times+=1
-                                    if Times_of_times==100:
-                                        limit1
-                                        
-                                    
-                                    
-                                        
-                                    import random 
-                                    r1 = random.randint(0, 15)
-                                    smaller=0
-                                    Caculus_oct3=format(r1,'04b')
-                                    
-                                    info_hex=size_data4
-                                    times10=0 
-                                    limit=0
-                                   
-                                    
-                                    while times10!=1:
-                                        
+                                size_data3=size_data2
+                                size_data10=size_data2
 
-                                      
-                                    
-                                        size_data3=info_hex
-
-                                       
-                                        
-                                        long=len(size_data3)
-                                        #print(long)
-                                        
-                                        if long<=8192:
-                                            limit=1
-                                            smaller=1
-                                            limit1=1
-                                        #print(long)
-                                       
-                                       
-                                        block=0
-                                        
-                                        blocks=64
-                                        #print(blocks)
-                                        
-                                        Calculus=""
-                                        Caculus_oct=0
-                                        res=""
-                                        res3=0
-                                        res6=""
-                                        file=0
-                                        resf=0
-                                        times_compress=0
-                                       
-
-                                        
-        
-                                        res_one_time=0
-                                        
-                                        while block<long:
-                                            Calculus=size_data3[block:block+blocks]
-                                            Calculus8=size_data3[block+blocks:block+blocks+1]
-                                            block=block+blocks
-                                            times_compress+=1
-                                            
-                                            if file==0:
-                                                    
-                                                long2=len(Calculus)
-                                                #print(long2)
-                                                block2=0
-                                                blocks2=0
-                                                Times=-4
-                                                Times2=0
-                                                res1=0
-                                                res2=0
-                                                res5=0
-                                                limit_find=0
-                                                
-                                                while Times2!=28:
-                                                    Times2+=4
-                                                   
-                                                    #print(Times2)
-                                                    
-            
-                                                    if Calculus[:4]==Calculus[Times2:Times2+4] and res1==0 and long2==64:
-                                                            Caculus_oct=format(Times//4,'03b')
-                                                            
-                                                            
-                                                            Caculus_oct=Caculus_oct
-                                                         
-                                                            Caculus_oct2=format(Times2//4,'03b')
-                                                           
-                                                            #print(Caculus_oct)
-                                                            #print(Caculus_oct2)
-                                                            
-                                                           
-                                                            
-                                                            res7=Caculus_oct2+Calculus[4:]
-                                                                
-                                                                
-                                                        
-                                                            res1=1
-                                                            res2=0
-                                                            
-                                                            res5=1
-                                                            
-                                                            
-                                                            if Calculus[Times2:Times2+4]==Caculus_oct3:
-                                                                                                                             
-                                                                
-                                                            
+                                long_file=len(size_data3)
                                
-                                                                   res+=res7+Calculus8
-                                                                   res_one_time+=1
-                                                                   #print(Calculus[Times2:Times2+4])
-                                                                  
-                                                                 
-                                                                   #print(res7)
-                                                                   block+=1
-                                                                   
-   
-                                                                   
-                                                                  
-                                                                   
-                                                                             
-                                                                             
-                                                            else:
-                                                                after_block=Calculus
-                                                                long2=len(Calculus)
-                                                                Calculus_A=int(Calculus[0:3],2)
-                                                                Calculus_A=(Calculus_A*4)-1
-                                                              
-                                                                if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A!=3 and Calculus[3:7]==Caculus_oct3 and long2==64:
-                                                                
-                                                                 Reverse=Calculus[3:7]
-                                                                 bl=0
-                                                                 
-                                                                 R1=""
-                                                                 while bl<5:
-                                                                     R=Reverse[bl:bl+1]
-                                                                
-                                                                 
-                                                                     if R=="0":
-                                                                         R1+="1"
-                                                                     elif R=="1":
-                                                                         R1+="0"
-                                                                     bl+=1
-                                                                   
-                                                                 
-                                                             
-                                                                 
-                                                             
-                                                                 Calculus[:Calculus_A]+R1+Calculus[Calculus_A+4:]
-                                                                 res+=Calculus
-                                                                
-                                                                 
-                                                                elif Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A!=3 and Calculus[3:7]!=Caculus_oct3 and long2==64:
-                                                                 Calculus[:Calculus_A]+Calculus[3:7]+Calculus[Calculus_A+4:]
-                                                                 res+=Calculus
-                                                                 
-                                                    
-                                                                 
-                                                                 
-                                                                else:
-                                                                    res+=Calculus 
-                                                                                                                                                                                         
-                                                                                                                                                                                         
-                                                if   res5==1:
-                                                    res3+=1
-                                                    #print(res3)
-                                                    #res+=after_block
-                                                    
-                                                elif res5==0:
-                                                   
-
-                                                   long2=len(Calculus)
-                                                   
-                                                   Calculus_A=int(Calculus[0:3],2)
-                                                   Calculus_A=(Calculus_A*4)-1
-                                                   
-                                                   if Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A!=3 and Calculus[3:7]==Caculus_oct3 and long2==64:
-                                                                
-                                                                 Reverse=Calculus[3:7]
-                                                                 bl=0
-                                                                 
-                                                                 R1=""
-                                                                 while bl<5:
-                                                                     R=Reverse[bl:bl+1]
-                                                                
-                                                                 
-                                                                     if R=="0":
-                                                                         R1+="1"
-                                                                     elif R=="1":
-                                                                         R1+="0"
-                                                                     bl+=1
-                                                                 
-                                                             
-                                                                 
-                                                             
-                                                                 Calculus[:Calculus_A]+R1+Calculus[Calculus_A+4:]
-                                                               
-                                                                
-                                                                 
-                                                                 res+=Calculus
-                                                   
-                                                   elif Calculus[Calculus_A:Calculus_A+4]==Caculus_oct3 and Calculus_A!=3 and Calculus[3:7]!=Caculus_oct3 and long2==64:
-                                                                 Calculus[:Calculus_A]+Calculus[3:7]+Calculus[Calculus_A+4:]
-                                                                 res+=Calculus
-                                                       
-                                                   else:
-                                                       res+=Calculus                                                       
-                                                       #print("4")
-                                                       
-                                                       
-                                                
-                                                    
-                                                resf+=1
-                                                
-                                            
-                                            #print(block)                                        
-                                            
-                                        
-         
-                                                    
-                                                    
-                                                    
-                                         
-                   
-                                        
-
-                                            
-                                        
-                                        times10+=1
-                                       
-                                            
-                                        info_hex=res 
-                                        long_after_compression=len(info_hex)
-                                        if long==long_after_compression:
-                                            limit=1
-                                            limit1=1
-                                            
-                                        info_hex=res
-                                        
-                                        
-                                                                       
-                                    
-                                    encypthion=Caculus_oct3+info_hex
-                                    
-                                   
-                                    
-                                    #print(res3)
-                                    #print(resf)
-                                    #print(limit)
-                                    
-                                    size_data14=""
-                                    
-                                    
-       
-                                    if smaller==1:
-                                        size_data14="11111110"+size_data2
-                                        times10=0
-                                        
-                                                                
-                                    elif limit==1 and smaller==0 and  times10!=0:
-                                    
-                                        
-                                        size_data14="00010000"+size_data3
-                                        #print(size_data14)
-                                        
-                                        times10-=1
-                                        
-                                    elif smaller==0 and limit==0 or times10==0:
-                                         size_data14="00000000"+encypthion
-                                         
-                                    #print(times10)
-                                        
-                                    b=bin(times10)[2:]
-                    
-                                    long_T=len(b)
-                                    b1=format(long_T,'08b')    
-                              
-                                    size_data12=b1+b+size_data14
-                              
-                                    size_data12=size_data12
-
-                                    size_data12="1"+size_data12
+                           
                                 
-                                    lenf=len(size_data12)
-                                            
-                                    add_bits118=""
-                                    count_bits=8-lenf%8
-                                    z=0
-                                        
-                                    if count_bits!=8:
-                                        while z<count_bits:
-                                                        add_bits118="0"+add_bits118
-                                                        z=z+1
-                                                                        
-                                                                        
-                                    size_data12=add_bits118+size_data12
-
-                                    long21=len(size_data12)
-
-                                    
-                                    
-                                    limit1=1
-                                
+                                long_block=16
                                
-                                    
-                                size_data11=size_data12
+                               
                                 
-                                b12=format(res_one_time,'040b')
-                                size_data11=b12+size_data12 
-                                #print(size_data11)
+                                
+                                times_of_times=0
+                           
+                                str_find=""
+                          
+                                
+
+                                cvf1=1
+  
+                                if cvf1==1:
+                                    times_compression=0  
                                   
-                               
-             
-                                                                                
-                                n = int(size_data11, 2)
-                                
-                                qqwslenf=len(size_data11)
-                                qqwslenf=(qqwslenf/8)*2
-                                qqwslenf=str(qqwslenf)
-                                qqwslenf="%0"+qqwslenf+"x"
-                             
-                                jl=binascii.unhexlify(qqwslenf % n)
-
-                                import paq
-                                jl=paq.compress(jl)
-                                
-                              
-                                
-                                
-                             
-                                
-                               
-                                
                                     
-                                size_after=len(jl)
 
-                                size_after=len(jl)
-                                
                                    
-                                qqqwz=qqqwz+1
-                                szxzzza=""
-                                szxzs=""
+                                    
+                                   
+                                    
+                                  
+                                    
+                                    Find_guess=0
+                                    while Find_guess!=1:
+                                        
+                                        while  times_of_times!=Times_compression:
+
+
+                                                    
+                                                   
+                                                    long_block=block_size_long
+                                                    long2=len(size_data3)
+                                                    
+                                                    blocks=8
+                                                    size_compress=63
+                                                    size_data1=""
+                                                    
+                                                     
+                                                    block=0
+
+                                                    #b=format(predict,'04b')
+                                                    #predict=predict+1
+                                                    #if predict==16:
+                                                        #predict=0
+                                                    
+                                                    long=len(size_data3)
+                                                    Times6=0
+                                                    size_data15=""
+                                                    #print(long)
+                                                    
+                                                    while block<long:
+
+                                                                                
+                                                                                Zeroes=size_data3[block:block+blocks]
+                                                                
+                                                                                if Zeroes=="01101100":
+                                                                                	size_data1="00000000"                                                                                                        
+                                                                                elif Zeroes=="00000000":
+                                                                                	size_data1="01101100" 
+                                                                                    
+                                                                                                                                                         
+                                                                                else: 
+                                                                                
+                                                                                	size_data1=Zeroes                                                                         
+                                                                                	                               
+                                                                                  
+
+                                                                                size_data6=size_data6+size_data1
+                                                                                block=block+blocks
+                                                                                
+                                                                                #print(block)
+                                                         
+                                                    times_compression=times_compression+1
+                                                    
+                                                    #print(times_compression)
+                                                    
+                                                    
+                                                    size_data3=size_data6
+                                                    
+                                                    Where4=0
+                                                    
+                                                    
+                                                    #print(len(size_data6))
+                                                    size_data6=""
+                                                    times_of_times=times_of_times+1
+                                                    
+                                        long_after=len(size_data3)
+                                        long2=len(size_data3)
+
+                                        
+                                        size_data9=size_data3
+                                        #print(size_data9)
+                                        
+                                           
+
+                                        
+                                        
+                                        Check_equal=0
+
+                                        
+                                            
+                                        
+                                        
+                                        long_file=len(size_data10)
+                                        long_after=len(size_data9)
+                                        #print(long_after) 
+                                       
+                                        if long_file>long_after or long_block<=long_after:
+                                           
+                                            size_data11=size_data9
+                                            Find_guess=1
+
+                                    
+                                    
+                                    n = int(size_data11, 2)
+                                
+                                    qqwslenf=len(size_data11)
+                                    qqwslenf=(qqwslenf/8)*2
+                                    qqwslenf=str(qqwslenf)
+                                    qqwslenf="%0"+qqwslenf+"x"
+                             
+                                    jl=binascii.unhexlify(qqwslenf % n)
+                                    
+                                    
+                                    data2=jl
+                                    
+                                    size_after=len(jl)
+                                    #print(size_after)
+
+                                    
+                                    import paq
+                                    jl= paq.compress(jl)
+                                    
+                                   
+                                    
+
+                                    
+                                        
+                                
+                                    size_after=len(jl)
+                                    #print(size_after)
+                                   
+                                    qqqwz=qqqwz+1
+                                    szxzzza=""
+                                    szxzs=""
                             
-                                assxw=assxw+1
-                                if assxw==1:
-                                    assx=10
-                                    if assx==10:
+                                    assxw=assxw+1
+                                    if assxw==1:
+                                        assx=10
+                                        if assx==10:
 
-                                        f2.write(jl)
-                                        x2 = time()
-                                        x3=x2-x
-                                        return print(x3)
+                                            f2.write(jl)
+                                            x2 = time()
+                                            x3=x2-x
+                                            return print(x3)
 
-    def encypthion2(self):
-
-                 
+    def cryptograpy_unpack(self):                      
                  if namez=="e":
                     
                     name = input("What is name of file? ")
@@ -560,13 +370,15 @@ class encypthion_class:
                     else:
                             print('Path is not exists!')
                             raise SystemExit
-                   
-                    namea=""
+                    Portal=2
+                    namea="file.W"
                     namem=""
                     namema="?"
-                   
+                    Deep=0
                  
                     assxw=0
+                    blockw=5
+                    blockw1=4
                     nameas=name
                     nac=len(nameas)
                     name_cut=""
@@ -586,6 +398,17 @@ class encypthion_class:
                     
                     long=len(nameas)
 
+                    
+                    
+                    
+                    
+                    Deep_long=240
+                    Deep_long_All=Deep_long*16
+                    block_size_long=16
+                    Times_compression=1
+                    	
+                    
+                    
                     nac=len(nameas)
                    
                     countraz=0
@@ -596,6 +419,7 @@ class encypthion_class:
                  
                     size_data3=""
                     size_data2=""
+              
 
                     sscvf=0
                     
@@ -616,15 +440,19 @@ class encypthion_class:
 
                        # Read the whole file at once
                         
-                        data = binary_file.read()
+                        data3 = binary_file.read()
 
+                        data=data3
+
+                        
                         import paq
-                        data=paq.decompress(data)  
-                        
+                        data= paq.decompress(data)
+                        if data[0:1]==b'\xd0':
+  
+                        	data=b'\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1'+data[1:]
+                        else:
+                        	data=data[1:]
 
-                        
-
-                    
                         if len(data)==0:
                             x4=0.0
                             print(x4)
@@ -702,196 +530,146 @@ class encypthion_class:
                                 x4=1
                                 if x4==1:
 
-                                    Count_add_block=0
-
                                     
 
                                     size_data3=size_data2
-                                    
-                                    res_one_time=size_data3[:40]
-                                    res_one_time=int(res_one_time,2)
+                                    size_data10=size_data2
                                    
-                                    size_data3=size_data3[40:]
-                                    if size_data3[0:9]=="000000001":
-                                        size_data3=size_data3[9:]
-                                    elif size_data3[0:8]=="00000001":
-                                        size_data3=size_data3[8:]
-                                    elif size_data3[0:7]=="0000001":
-                                        size_data3=size_data3[7:]
-                                    elif size_data3[0:6]=="000001":
-                                        size_data3=size_data3[6:]
-                                    elif size_data3[0:5]=="00001":
-                                        size_data3=size_data3[5:]
-                                    elif size_data3[0:4]=="0001":
-                                        size_data3=size_data3[4:]
-                                    elif size_data3[0:3]=="001":
-                                        size_data3=size_data3[3:]
-                                    elif size_data3[0:2]=="01":
-                                        size_data3=size_data3[2:]
-                                    elif size_data3[0:1]=="1":
-                                        size_data3=size_data3[1:]
-
-
-
-
-                                    
-                                     
-                                    
-                                    
-                                    
-                                    Long_Times=int(size_data3[:8],2)
-                                    size_data3=size_data3[8:]
-                                    
-                                    Times_count=int(size_data3[:Long_Times],2)
-                                    size_data3=size_data3[Long_Times:]
-                                    Extract_file=0
-
-                                    if size_data3[:8]=="00000000":
-                                        Extract_file=1
-
-                                    elif size_data3[:8]=="00010000":
-                                        Extract_file=1
-
-                                    elif size_data3[:8]=="11111110":
-                                        Extract_file=0
-                                        
-                                    #print(Times_count)
-
-                                    size_data3=size_data3[8:]
-                                        
-
-                                    Times10=0  
-                                    
-                                    
-                                    if Times_count!=0:                                                                               
-                                        Caculus_oct3=size_data3[:4]
-                                        size_data3=size_data3[4:]
-                                    
-                                    
-                                    
-                                    Count_add_block2=""
-                                    if Extract_file==0 or Times_count==0:
-                                        Count_add_block2=size_data3
-                                    elif Extract_file==1 and Times_count>0:
-                                        while Times_count!=Times10:
-                                            
- 
-                                            
-                                            
-                                            block=0
-                                            blocks=64
-                                           
-                                            long=len(size_data3)
-                                            #print(long)
-                                            
-                                            check_long=len(size_data3)
-                                            
-                                            Count_add_block=""
-                                            
-                                            times_compress=0
-
-                                            res_one_time2=0
-
-                                            while block<long:
-                                                            Calculus=size_data3[block:block+blocks]
-                                                            block+=blocks
-                                                            times_compress+=1
-                                                            long2=len(Calculus)
-                                                            Calculus_A=int(Calculus[0:3],2)
-                                                            Calculus_A=(Calculus_A*4)-1
-                                                            Calculus_A1=Calculus_A
-                                                            
-                                                            Reverse=Calculus[3:7]
-                                                            bl=0
-                                                                 
-                                                            R1=""
-                                                            while bl<5:
-                                                                R=Reverse[bl:bl+1]
-                                                                
-                                                                 
-                                                                if R=="0":
-                                                                    R1+="1"
-                                                                elif R=="1":
-                                                                    R1+="0"
-                                                                bl+=1
-                                                                 
-                                                             
-                                                                 
-                                                             
-                                                        
-   
-
-
-                                                                
-                                                            if Calculus[Calculus_A1:Calculus_A1+4]==Caculus_oct3 and Calculus_A1!=3 and long2==64 and res_one_time2<res_one_time:
-                                                                
-                                                            
-
-                                             
-                                                                    
-                                                                    
-                                                                    add_block=Caculus_oct3+Calculus[3:]
-                                                                    res_one_time2+=1
-                                                                    
-                                                                    Count_add_block+=add_block
-                                                                    #print(len(add_block))
-                                                                
-
-                                                           
-                                                            
-
-                                                                
-                                                            else:
-                                                                    if Calculus[Calculus_A1:Calculus_A1+4]==R1 and R1==Caculus_oct3 and Calculus_A1!=3 and long2==64:
-                                                                         Calculus[:Calculus_A1]+Caculus_oct3+Calculus[Calculus_A1+4:]
-                                                                         Count_add_block+=Calculus
-
-                                                                    elif Calculus[Calculus_A1:Calculus_A1+4]==Calculus[3:7] and Calculus_A1!=3 and long2==64:
-                                                                         Calculus[:Calculus_A1]+Caculus_oct3+Calculus[Calculus_A1+4:]
-                                                                         Count_add_block+=Calculus
-                                                                    else:
-                                                                        Count_add_block+=Calculus 
-                                                                                                                            
-                                                            
-                                                            
-                                                        
-
-                                                        
-                                                        
-                                                    
-                                            
-                                            
-
-                                            size_data3=Count_add_block
-                                            Count_add_block2=Count_add_block
-                                            Count_add_block=""
-
-                                            Times10+=1                                    
-                                    
-                                   
+                                    size_data4=""
+                                    size_data7=""
+                                    size_data8=""
+                                    size_data5=""
+                                    size_data6=""
                                     
 
-                                    size=len(size_data3)
-                                    #print(size//8)
-                                    
-                                  
-                                    
-                                    
-                                    
-                                                                                  
-                                            
+                                    long_file=len(size_data3)
 
+
+
+                                    long_block=16
+
+
+
+
+                                    times_of_times=0
+
+                                    str_find=""
+
+
+
+                                    cvf1=1
+
+                                    if cvf1==1:
+                                        times_compression=0  
+
+
+
+
+
+
+
+
+
+                                        Find_guess=0
+                                        while Find_guess!=1:
+
+                                            while  times_of_times!=Times_compression:
+
+
+
+
+                                                        long_block=block_size_long
+                                                        long2=len(size_data3)
+
+                                                        blocks=8
+                                                        size_compress=63
+
+
+
+                                                        block=0
+
+                                                        #b=format(predict,'04b')
+                                                        #predict=predict+1
+                                                        #if predict==16:
+                                                            #predict=0
+
+                                                        long=len(size_data3)
+                                                        Times6=0
+                                                        size_data1=""
+                                                        #print(long)
+
+                                                        while block<long:
+                                                                                
+                                                                                Zeroes=size_data3[block:block+blocks]
+                                                                                if Zeroes=="01101100":
+                                                                                	size_data1="00000000"                                                                                                        
+                                                                                elif Zeroes=="00000000":
+                                                                                	size_data1="01101100"                  
+                                                                                else: 
+                                                                                
+                                                                                	size_data1=Zeroes                        
+
+                                                                                    
+                                                                                size_data6=size_data6+size_data1
+                                                                                block=block+blocks
+                                                                                    #print(block)
+
+                                                        times_compression=times_compression+1
+
+                                                        #print(times_compression)
+
+
+                                                        size_data3=size_data6
+
+                                                        Where4=0
+
+
+                                                        #print(len(size_data6))
+                                                        size_data6=""
+                                                        times_of_times=times_of_times+1
+
+                                            long_after=len(size_data3)
+                                            long2=len(size_data3)
+
+
+                                            size_data9=size_data3
+                                            #print(size_data9)
+
+
+
+
+
+                                            Check_equal=0
+
+
+
+
+
+                                            long_file=len(size_data10)
+                                            long_after=len(size_data9)
+                                            #print(long_after) 
+
+                                            if long_file>long_after or long_block<=long_after:
+
+                                                size_data11=size_data9
+                                                Find_guess=1
                                       
-                                    n = int(size_data3, 2)
+                                    
+                                    n = int(size_data11, 2)
                                     
                                     
-                                    qqwslenf=len(size_data3)
+                                    qqwslenf=len(size_data11)
                                     qqwslenf=(qqwslenf/8)*2
                                     qqwslenf=str(qqwslenf)
                                     qqwslenf="%0"+qqwslenf+"x"
                              
                                     jl=binascii.unhexlify(qqwslenf % n)
-                                  
+                                    
+                                    
+                                    
+                                    data2=jl
+
+                               
                                     sssssw=len(jl) 
                                   
                                    
@@ -909,13 +687,15 @@ class encypthion_class:
                                             f2.write(jl)
                                             x2 = time()
                                             x3=x2-x
-                                            return print(x3)  
+                                            return print(x3)
+
+  
                   
 self=""                                
-d=encypthion_class()
+d=compression()
     
-xw=d.encypthion1()
+xw=d.cryptograpy_compression()
 print(xw)
 
-xw1=d.encypthion2()
+xw1=d.cryptograpy_unpack()
 print(xw1)
